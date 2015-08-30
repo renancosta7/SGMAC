@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SlnArCond.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <script src="Scripts/jquery-1.4.1.min.js"></script>
+    <script src="Scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#txtRg").mask("99.999.999-9");
+            $("#txtTelefone").mask("(099) 9999-9999");
+            $("#txtCpf").mask("999.999.999-99");
+            $("#txtBuscaCpf").mask("999.999.999-99");
+            $("#txtBuscaCnpj").mask("99.999.999/9999-99");
+            $("#txtDtNascimento").mask("99/99/9999");
+            $("#txtCep").mask("99999-999");
+            $("#txtCnpj").mask("99.999.999/9999-99");
+            $("#txtData").mask("99/99/9999");
+            $("#txtData1").mask("99/99/9999");
+            $("#txtData2").mask("99/99/9999");
+            $("#txtDataEntrada").mask("99/99/9999");
+            $("#txtDataSaida").mask("99/99/9999");
+        });
+    </script>
+    <script language="javascript">
+        function MascaraMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e) {
+            var sep = 0;
+            var key = '';
+            var i = j = 0;
+            var len = len2 = 0;
+            var strCheck = '0123456789';
+            var aux = aux2 = '';
+            var whichCode = (window.Event) ? e.which : e.keyCode;
+            if (whichCode == 13) return true;
+            key = String.fromCharCode(whichCode); // Valor para o código da Chave
+            if (strCheck.indexOf(key) == -1) return false; // Chave inválida
+            len = objTextBox.value.length;
+            for (i = 0; i < len; i++)
+                if ((objTextBox.value.charAt(i) != '0') && (objTextBox.value.charAt(i) != SeparadorDecimal)) break;
+            aux = '';
+            for (; i < len; i++)
+                if (strCheck.indexOf(objTextBox.value.charAt(i)) != -1) aux += objTextBox.value.charAt(i);
+            aux += key;
+            len = aux.length;
+            if (len == 0) objTextBox.value = '';
+            if (len == 1) objTextBox.value = '0' + SeparadorDecimal + '0' + aux;
+            if (len == 2) objTextBox.value = '0' + SeparadorDecimal + aux;
+            if (len > 2) {
+                aux2 = '';
+                for (j = 0, i = len - 3; i >= 0; i--) {
+                    if (j == 3) {
+                        aux2 += SeparadorMilesimo;
+                        j = 0;
+                    }
+                    aux2 += aux.charAt(i);
+                    j++;
+                }
+                objTextBox.value = '';
+                len2 = aux2.length;
+                for (i = len2 - 1; i >= 0; i--)
+                    objTextBox.value += aux2.charAt(i);
+                objTextBox.value += SeparadorDecimal + aux.substr(len - 2, len);
+            }
+            return false;
+        }
+
+    </script>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="Form1" runat="server" style="font-size: large; font-family: Arial, Helvetica, sans-serif">
+    <div class="page">
+        <div class="header">
+            <div class="title" style="background-color: #25AAE0">
+                <h1 style="position: absolute; z-index: auto; left: 215px; height: 46px; font-size: x-large;">
+                    Sistema de Gerenciamento e Manutenção de Ar Condicionados     <center>SGMAC</center>
+                </h1>
+                <asp:Image ID="Image1" runat="server" Height="164px" ImageUrl="~/LOGO.png" 
+                    Width="202px" />
+            </div>
+            <div class="loginDisplay" style="background-color: #25AAE0">
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:Label ID="lblUsuario" runat="server" Font-Size="Medium"></asp:Label>
+                <br />
+                <asp:Button ID="btnDeslogar" runat="server" OnClick="btnDeslogar_Click" Text="Sair" />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal" >
+                    <Items>
+                        <asp:MenuItem Text="Cliente" Value="Cliente">
+                            <asp:MenuItem NavigateUrl="~/CadastroCliente.aspx" Text="Cadastro" Value="Cadastro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ConsultaCliente.aspx" Text="Consulta" Value="Consulta">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Funcionário" Value="Funcionario">
+                            <asp:MenuItem NavigateUrl="~/CadastroFuncionario.aspx" Text="Cadastro" Value="Cadastro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ConsultaFuncionario.aspx" Text="Consulta" Value="Consulta">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Fornecedor" Value="Fornecedor">
+                            <asp:MenuItem NavigateUrl="~/CadastroFornecedor.aspx" Text="Cadastro" Value="Cadastro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Consultafonecedor.aspx" Text="Consulta" Value="Consulta">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Peças" Value="Peças">
+                            <asp:MenuItem NavigateUrl="~/CadastroPecas.aspx" Text="Cadastro" Value="Cadastro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ConsultarEstoque.aspx" Text="Controle de Estoque" Value="Controle de Estoque">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/VendaPecas.aspx" Text="Venda de Peças" Value="Venda de Peças">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Manutenção" Value="Manutenção">
+                            <asp:MenuItem NavigateUrl="~/CadastroManu.aspx" Text="Cadastro" Value="Cadastro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ConsManuAr.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Relatórios" Value="Relatórios">
+                            <asp:MenuItem NavigateUrl="~/RelatorioVenda.aspx" Text="Venda" Value="Venda"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/RelatorioManutencao.aspx" Text="Manutenção" Value="Manutenção">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/RelatorioFinanceiro.aspx" Text="Financeiro" Value="Financeiro">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/RelatorioFuncionario.aspx" Text="Funcionário" Value="Funcionário"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer" style="font-size: small">
+        ARD² - 2015
+     </div>
+    </form>
+</body>
+</html>

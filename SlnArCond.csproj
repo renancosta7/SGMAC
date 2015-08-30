@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AB0CF89-66C2-48D3-A502-1776C628E617}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SlnArCond</RootNamespace>
+    <AssemblyName>SlnArCond</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\Nova pasta (6)\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CadastroCliente.aspx" />
+    <Content Include="CadastroFornecedor.aspx" />
+    <Content Include="CadastroFuncionario.aspx" />
+    <Content Include="CadastroManu.aspx" />
+    <Content Include="CadastroPecas.aspx" />
+    <Content Include="ConsManuAr.aspx" />
+    <Content Include="ConsultaCliente.aspx" />
+    <Content Include="Consultafonecedor.aspx" />
+    <Content Include="ConsultaFuncionario.aspx" />
+    <Content Include="ConsultarEstoque.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LOGO.png" />
+    <Content Include="Logopdf.jpg" />
+    <Content Include="MenuPrincipal.aspx" />
+    <Content Include="RelatorioFinanceiro.aspx" />
+    <Content Include="RelatorioFuncionario.aspx" />
+    <Content Include="RelatorioManutencao.aspx" />
+    <Content Include="RelatorioVenda.aspx" />
+    <Content Include="ResumoVenda.aspx" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="VendaPecas.aspx" />
+    <Content Include="VendaPecas2.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business.cs" />
+    <Compile Include="CadastroCliente.aspx.cs">
+      <DependentUpon>CadastroCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroCliente.aspx.designer.cs">
+      <DependentUpon>CadastroCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroFornecedor.aspx.cs">
+      <DependentUpon>CadastroFornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroFornecedor.aspx.designer.cs">
+      <DependentUpon>CadastroFornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroFuncionario.aspx.cs">
+      <DependentUpon>CadastroFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroFuncionario.aspx.designer.cs">
+      <DependentUpon>CadastroFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroManu.aspx.cs">
+      <DependentUpon>CadastroManu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroManu.aspx.designer.cs">
+      <DependentUpon>CadastroManu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroPecas.aspx.cs">
+      <DependentUpon>CadastroPecas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroPecas.aspx.designer.cs">
+      <DependentUpon>CadastroPecas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsManuAr.aspx.cs">
+      <DependentUpon>ConsManuAr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsManuAr.aspx.designer.cs">
+      <DependentUpon>ConsManuAr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCliente.aspx.cs">
+      <DependentUpon>ConsultaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaCliente.aspx.designer.cs">
+      <DependentUpon>ConsultaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultafonecedor.aspx.cs">
+      <DependentUpon>Consultafonecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultafonecedor.aspx.designer.cs">
+      <DependentUpon>Consultafonecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaFuncionario.aspx.cs">
+      <DependentUpon>ConsultaFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaFuncionario.aspx.designer.cs">
+      <DependentUpon>ConsultaFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEstoque.aspx.cs">
+      <DependentUpon>ConsultarEstoque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarEstoque.aspx.designer.cs">
+      <DependentUpon>ConsultarEstoque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dao.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.designer.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdfPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioFinanceiro.aspx.cs">
+      <DependentUpon>RelatorioFinanceiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioFinanceiro.aspx.designer.cs">
+      <DependentUpon>RelatorioFinanceiro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioFuncionario.aspx.cs">
+      <DependentUpon>RelatorioFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioFuncionario.aspx.designer.cs">
+      <DependentUpon>RelatorioFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioManutencao.aspx.cs">
+      <DependentUpon>RelatorioManutencao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioManutencao.aspx.designer.cs">
+      <DependentUpon>RelatorioManutencao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioVenda.aspx.cs">
+      <DependentUpon>RelatorioVenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioVenda.aspx.designer.cs">
+      <DependentUpon>RelatorioVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumoVenda.aspx.cs">
+      <DependentUpon>ResumoVenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumoVenda.aspx.designer.cs">
+      <DependentUpon>ResumoVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VendaPecas.aspx.cs">
+      <DependentUpon>VendaPecas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendaPecas.aspx.designer.cs">
+      <DependentUpon>VendaPecas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendaPecas2.aspx.cs">
+      <DependentUpon>VendaPecas2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendaPecas2.aspx.designer.cs">
+      <DependentUpon>VendaPecas2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2364</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

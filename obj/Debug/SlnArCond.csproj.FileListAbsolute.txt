@@ -1,0 +1,15 @@
+c:\users\note\documents\visual studio 2010\Projects\SlnArCond\SlnArCond\bin\SlnArCond.dll
+c:\users\note\documents\visual studio 2010\Projects\SlnArCond\SlnArCond\bin\SlnArCond.pdb
+c:\users\note\documents\visual studio 2010\Projects\SlnArCond\SlnArCond\obj\Debug\ResolveAssemblyReference.cache
+c:\users\note\documents\visual studio 2010\Projects\SlnArCond\SlnArCond\obj\Debug\SlnArCond.dll
+c:\users\note\documents\visual studio 2010\Projects\SlnArCond\SlnArCond\obj\Debug\SlnArCond.pdb
+C:\Users\note\Documents\Visual Studio 2010\Projects\SlnArCond\SlnArCond\bin\itextsharp.dll
+C:\Users\note\Documents\Visual Studio 2010\Projects\SlnArCond\SlnArCond\bin\itextsharp.xml
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\bin\SlnArCond.dll.config
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\bin\SlnArCond.dll
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\bin\SlnArCond.pdb
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\bin\itextsharp.dll
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\bin\itextsharp.xml
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\obj\Debug\SlnArCond.csprojResolveAssemblyReference.cache
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\obj\Debug\SlnArCond.dll
+C:\Users\note\Documents\Visual Studio 2013\Projects\SlnArCond\SlnArCond\obj\Debug\SlnArCond.pdb
